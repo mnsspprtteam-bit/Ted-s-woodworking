@@ -85,13 +85,26 @@
   .dot{width:8px;height:8px;border-radius:50%;background:#2aa7ff}
 
   h1{font-size:36px;line-height:1.2;margin:10px 0 14px;font-weight:900}
-  .sub{font-size:18px;color:var(--muted);margin:0 0 18px}
+  .sub{font-size:18px;color:var(--muted);margin:0 0 10px}
+
+  /* NEW: subtle disclosure under subheadline */
+  .disclosure{
+    font-size:13px;
+    color:var(--muted);
+    margin:0 0 18px;
+  }
+  .disclosure a{
+    color:var(--muted);
+    text-decoration:underline;
+    text-underline-offset:2px;
+  }
+
   h2{font-size:24px;margin:34px 0 12px}
   p{font-size:18px;margin:0 0 18px}
   ul{margin:0 0 18px 20px;font-size:18px}
   li{margin:7px 0}
 
-  /* TOC */
+  /* TOC (improved tap spacing) */
   .toc{
     background:var(--soft);
     border:1px solid var(--line);
@@ -99,19 +112,29 @@
     padding:14px 14px;
     margin:18px 0 22px;
   }
-  .toc strong{display:block;margin-bottom:8px}
-  .toc a{display:block;color:#111;text-decoration:underline;text-underline-offset:2px;font-size:16px;margin:6px 0}
-
-  /* ✅ Banner image style (WIDE) */
-  .img{margin:18px 0 26px;text-align:center}
-  .img.banner{
-    margin:18px 0 26px;
+  .toc strong{display:block;margin-bottom:10px}
+  .toc a{
+    display:block;
+    color:#111;
+    text-decoration:underline;
+    text-underline-offset:2px;
+    font-size:16px;
+    padding:8px 8px;          /* NEW: bigger tap target */
+    border-radius:10px;
+    margin:2px 0;
   }
+  .toc a:hover{
+    background:rgba(0,0,0,.04);
+  }
+
+  /* Banner images */
+  .img{margin:18px 0 26px;text-align:center}
+  .img.banner{margin:18px 0 26px}
   .img.banner a{display:block}
   .img.banner img{
     width:100%;
-    height:240px;                /* mobile banner height */
-    object-fit:cover;            /* makes it “banner” style */
+    height:240px;
+    object-fit:cover;
     object-position:center;
     border-radius:16px;
     border:1px solid var(--line);
@@ -119,13 +142,8 @@
     display:block;
   }
   @media (min-width: 900px){
-    .img.banner img{ height:380px; } /* desktop banner height */
+    .img.banner img{ height:330px; }
   }
-  /* For blueprint image: keep it a bit “less cropped” */
-  .img.banner.blueprint img{
-    object-position:center;
-  }
-
   .caption{font-size:13px;color:#666;margin-top:8px}
 
   /* Highlight */
@@ -170,6 +188,13 @@
     0%{box-shadow:0 0 0 0 rgba(47,191,113,0.45)}
     70%{box-shadow:0 0 0 16px rgba(47,191,113,0)}
     100%{box-shadow:0 0 0 0 rgba(47,191,113,0)}
+  }
+
+  /* NEW: trust microtext under main CTA button */
+  .trustline{
+    margin-top:10px;
+    font-size:12.5px;
+    color:var(--muted);
   }
 
   /* Cards */
@@ -262,6 +287,12 @@
     A simple reason many DIY builds fall apart (and what skilled builders do to avoid wasted wood, time, and headaches).
   </p>
 
+  <!-- NEW: subtle disclosure near top -->
+  <p class="disclosure">
+    This page may contain affiliate links. Details and policies are available on the
+    <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">official website</a>.
+  </p>
+
   <div class="toc">
     <strong>In this article:</strong>
     <a href="#problem">• The real problem nobody talks about</a>
@@ -271,7 +302,7 @@
     <a href="#faq">• Quick FAQ</a>
   </div>
 
-  <!-- ✅ BANNER HERO IMAGE -->
+  <!-- BANNER HERO IMAGE -->
   <div class="img banner">
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
       <img src="img/hero-workshop.jpg" alt="Woodworker working in a home workshop" loading="lazy">
@@ -308,8 +339,8 @@
     <li>Projects matched to skill level</li>
   </ul>
 
-  <!-- ✅ BANNER BLUEPRINT IMAGE -->
-  <div class="img banner blueprint">
+  <!-- BANNER BLUEPRINT IMAGE -->
+  <div class="img banner">
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
       <img src="img/blueprints.jpg" alt="Detailed woodworking plans and blueprints" loading="lazy">
     </a>
@@ -325,9 +356,16 @@
   <div class="cta">
     <p class="ctaTitle">See how this woodworking system works step by step</p>
     <p class="ctaSub">Instant access • Digital plans • Build at your pace</p>
+
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
       View the Complete Woodworking System →
     </a>
+
+    <!-- NEW: trust microtext -->
+    <div class="trustline">
+      You’ll be redirected to the vendor’s secure checkout and official policies.
+    </div>
+
     <p class="ctaSub" style="margin-top:12px;">
       Prefer details first? <a href="sales.html" style="color:#111;text-decoration:underline;">See what’s included</a>.
     </p>
@@ -377,7 +415,7 @@
   </div>
   <div class="mini" style="margin-top:12px;">
     <strong>Where do I see pricing and access details?</strong>
-    <p style="margin:0;">On the official vendor page (you’ll be redirected from the button above).</p>
+    <p style="margin:0;">On the official vendor page (you’ll be redirected from the buttons above).</p>
   </div>
 
   <footer>
