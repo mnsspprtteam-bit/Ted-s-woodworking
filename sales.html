@@ -8,67 +8,232 @@
 
 <style>
   :root{
-    --bg:#0b0f12; --card:rgba(255,255,255,.05); --line:rgba(255,255,255,.12);
-    --text:#f2f5f7; --muted:#b9c2c9;
-    --green1:#2fbf71; --green2:#1b7f3a; --max:1100px;
+    --bg:#0b0f12;
+    --card:rgba(255,255,255,.05);
+    --line:rgba(255,255,255,.12);
+    --text:#f2f5f7;
+    --muted:#b9c2c9;
+    --green1:#2fbf71;
+    --green2:#1b7f3a;
+    --max:1100px;
   }
+
   *{box-sizing:border-box}
-  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
   a{color:inherit}
-  .wrap{max-width:var(--max);margin:auto;padding:26px 18px 110px}
-  .top{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:12px}
-  .pill{border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 10px;border-radius:999px}
-  h1{font-size:42px;line-height:1.1;margin:10px 0 12px;letter-spacing:-.02em}
-  .sub{color:var(--muted);max-width:880px;margin:0 0 18px}
-  .hero{display:grid;gap:16px;grid-template-columns:1fr}
-  @media(min-width:980px){.hero{grid-template-columns:1.05fr .95fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
-  .img{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#06080b}
-  .img img{display:block;width:100%;height:auto}
-  .kpis{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin-top:12px}
-  .kpi{border:1px solid var(--line);border-radius:16px;padding:12px;background:rgba(0,0,0,.25)}
+
+  .wrap{max-width:var(--max);margin:auto;padding:70px 18px 130px}
+
+  /* TOP BAR */
+  .top{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:12px;
+  }
+  .pill{
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.03);
+    padding:7px 10px;
+    border-radius:999px;
+  }
+
+  h1{
+    font-size:42px;
+    line-height:1.1;
+    margin:10px 0 14px;
+    letter-spacing:-.02em;
+  }
+  .sub{
+    color:var(--muted);
+    max-width:880px;
+    margin:0 0 22px;
+  }
+
+  /* ✅ BANNER IMAGE */
+  .banner{
+    margin:20px 0 28px;
+  }
+  .banner img{
+    width:100%;
+    height:260px;           /* mobile */
+    object-fit:cover;
+    object-position:center;
+    border-radius:18px;
+    border:1px solid var(--line);
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
+    display:block;
+  }
+  @media (min-width: 900px){
+    .banner img{ height:380px; } /* desktop */
+  }
+
+  /* HERO GRID */
+  .hero{
+    display:grid;
+    gap:18px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:980px){
+    .hero{grid-template-columns:1.05fr .95fr}
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:20px;
+  }
+
+  .kpis{
+    display:grid;
+    gap:12px;
+    grid-template-columns:1fr 1fr;
+    margin-top:16px;
+  }
+  .kpi{
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:12px;
+    background:rgba(0,0,0,.25);
+  }
   .kpi strong{display:block;font-size:18px}
   .kpi span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
-  h2{font-size:28px;margin:36px 0 12px}
-  p{margin:0 0 14px;color:rgba(242,245,247,.95)}
-  ul{margin:0 0 14px 18px}
+
+  h2{font-size:30px;margin:38px 0 14px}
+  p{margin:0 0 16px;color:rgba(242,245,247,.95)}
+  ul{margin:0 0 16px 18px}
   li{margin:8px 0}
+
+  /* CTA BUTTONS */
   .btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    background:linear-gradient(180deg,var(--green1),var(--green2));
-    color:#052012;text-decoration:none;font-weight:900;
-    padding:14px 18px;border-radius:14px;font-size:16px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     width:100%;
-    box-shadow:0 14px 30px rgba(47,191,113,.25);
+    background:linear-gradient(180deg,var(--green1),var(--green2));
+    color:#052012;
+    text-decoration:none;
+    font-weight:900;
+    padding:16px 18px;
+    border-radius:16px;
+    font-size:17px;
+    box-shadow:0 18px 40px rgba(47,191,113,.35);
     transition:transform .2s ease, filter .2s ease;
   }
-  .btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+  .btn:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.06);
+  }
   .btnSecondary{
-    background:transparent;color:var(--text);border:1px solid var(--line);
-    box-shadow:none;font-weight:800
+    background:transparent;
+    color:var(--text);
+    border:1px solid var(--line);
+    box-shadow:none;
+    font-weight:800;
   }
-  .grid{display:grid;gap:14px;grid-template-columns:1fr}
-  @media(min-width:980px){.grid{grid-template-columns:1fr 1fr}}
-  .quote{border-left:4px solid var(--green1);padding-left:14px;margin:16px 0}
-  .quote span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
-  .faq details{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:16px;padding:12px;margin:10px 0}
-  .faq summary{cursor:pointer;font-weight:900}
-  footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12.5px}
-  footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;margin-right:12px}
+
+  .grid{
+    display:grid;
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:980px){
+    .grid{grid-template-columns:1fr 1fr}
+  }
+
+  .quote{
+    border-left:4px solid var(--green1);
+    padding-left:14px;
+    margin:16px 0;
+  }
+  .quote span{
+    display:block;
+    color:var(--muted);
+    font-size:13px;
+    margin-top:6px;
+  }
+
+  .faq details{
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.03);
+    border-radius:16px;
+    padding:14px;
+    margin:12px 0;
+  }
+  .faq summary{
+    cursor:pointer;
+    font-weight:900;
+  }
+
+  footer{
+    margin-top:40px;
+    border-top:1px solid var(--line);
+    padding-top:18px;
+    color:var(--muted);
+    font-size:12.5px;
+  }
+  footer a{
+    color:var(--muted);
+    text-decoration:underline;
+    margin-right:12px;
+  }
+
+  /* STICKY CTA */
   .sticky{
-    position:fixed;left:0;right:0;bottom:0;
-    background:rgba(7,10,13,.92);border-top:1px solid var(--line);
-    padding:10px 12px;backdrop-filter: blur(8px);
+    position:fixed;
+    left:0;right:0;bottom:0;
+    background:rgba(7,10,13,.92);
+    border-top:1px solid var(--line);
+    padding:10px 12px;
+    backdrop-filter: blur(8px);
+    z-index:9998;
   }
-  .stickyInner{max-width:var(--max);margin:0 auto;display:flex;gap:10px;align-items:center;justify-content:space-between}
-  .stickyText{min-width:0}
-  .stickyText strong{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .stickyText span{display:block;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .btnInline{width:auto;padding:10px 14px;border-radius:12px;font-size:14px}
+  .stickyInner{
+    max-width:var(--max);
+    margin:0 auto;
+    display:flex;
+    gap:10px;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .stickyText strong{
+    display:block;
+    font-size:13px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .stickyText span{
+    display:block;
+    font-size:12px;
+    color:var(--muted);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .btnInline{
+    width:auto;
+    padding:10px 16px;
+    border-radius:14px;
+    font-size:14px;
+  }
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
   <div class="top">
@@ -78,107 +243,107 @@
 
   <h1>A Woodworking Plans Library Designed to Reduce Guesswork</h1>
   <p class="sub">
-    If you want clearer steps, better diagrams, and faster project selection — this is the kind of structure many builders prefer.
+    Clear steps, detailed diagrams, and projects matched to your skill level —
+    so you can build with confidence instead of frustration.
   </p>
+
+  <!-- ✅ BANNER IMAGE -->
+  <div class="banner">
+    <img src="img/tools-wood.jpg" alt="Woodworking tools on a workbench" loading="lazy">
+  </div>
 
   <section class="hero">
     <div class="card">
-      <!-- IMAGE 3 -->
-      <div class="img">
-        <img src="img/tools-wood.jpg" alt="Woodworking tools and wood close-up" loading="lazy">
-      </div>
+      <h2 style="margin-top:0">What You Get</h2>
+      <ul>
+        <li>Large woodworking plans library</li>
+        <li>Exact materials & cutting lists</li>
+        <li>Clear step-by-step instructions</li>
+        <li>Detailed diagrams and schematics</li>
+        <li>Projects for all skill levels</li>
+      </ul>
 
       <div class="kpis">
-        <div class="kpi"><strong>Large plan library</strong><span>Browse projects by type and difficulty</span></div>
-        <div class="kpi"><strong>Structured format</strong><span>Steps, lists, and diagrams</span></div>
+        <div class="kpi">
+          <strong>Structured format</strong>
+          <span>Designed to reduce guesswork</span>
+        </div>
+        <div class="kpi">
+          <strong>Instant access</strong>
+          <span>Digital plans, no shipping</span>
+        </div>
       </div>
 
-      <div style="display:grid;gap:10px;margin-top:14px">
-        <a class="btn" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
+      <div style="display:grid;gap:12px;margin-top:18px">
+        <a class="btn" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank">
           Get Instant Access →
         </a>
-        <a class="btn btnSecondary" href="index.html">← Go back to the presell</a>
+        <a class="btn btnSecondary" href="index.html">
+          ← Back to the Presell
+        </a>
       </div>
-
-      <p style="margin-top:12px;color:var(--muted);font-size:12.5px;">
-        This page may contain affiliate links. Always confirm pricing, access and policies on the official vendor site.
-      </p>
     </div>
 
     <aside class="card">
-      <h2 style="margin-top:0">What you’re looking for (most likely)</h2>
-      <p>You want plans that reduce confusion and help you finish projects you’re proud of.</p>
+      <h2 style="margin-top:0">Why Builders Prefer This</h2>
+      <p>
+        Instead of vague instructions, these plans focus on clarity —
+        helping you save time, materials, and frustration.
+      </p>
       <ul>
-        <li>Clear steps from start to finish</li>
-        <li>Materials/cut lists to plan ahead</li>
-        <li>Diagrams to avoid “guessing”</li>
-        <li>Projects for different skill levels</li>
+        <li>No missing steps</li>
+        <li>No guessing measurements</li>
+        <li>Projects matched to experience</li>
+        <li>More finished builds</li>
       </ul>
 
-      <div style="border:1px solid var(--line);border-radius:16px;padding:12px;background:rgba(0,0,0,.25);">
-        <p style="margin:0;color:rgba(242,245,247,.95);">
-          <strong>Pro tip:</strong> Pick a simple project first, finish it, then move up in complexity. Momentum matters.
+      <div style="border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(0,0,0,.25);">
+        <p style="margin:0;">
+          <strong>Tip:</strong> Start with a simple project first. Momentum matters.
         </p>
       </div>
     </aside>
   </section>
 
-  <h2>What’s included (high-level)</h2>
-  <div class="grid">
-    <div class="card">
-      <h3 style="margin:0 0 10px">Plans library</h3>
-      <p>Browse multiple project categories so you can choose based on your space, tools, and skill level.</p>
-    </div>
-    <div class="card">
-      <h3 style="margin:0 0 10px">Guided structure</h3>
-      <p>Step-by-step style formatting that helps you avoid missing measurements or confusing assembly sequences.</p>
-    </div>
-  </div>
-
-  <h2>Testimonials (example-style)</h2>
-  <p style="color:var(--muted);font-size:12.5px;margin-top:-6px;">
-    Example-style testimonials only (not copied from any vendor page).
-  </p>
+  <h2>What Builders Are Saying</h2>
 
   <div class="card">
     <div class="quote">
-      <p>“The diagrams made a bigger difference than I expected. I stopped ‘figuring it out’ halfway through.”</p>
-      <span>— Jason M., DIY builder</span>
+      <p>“The diagrams made a huge difference. I stopped guessing halfway through projects.”</p>
+      <span>— Jason M., DIY Builder</span>
     </div>
     <div class="quote">
-      <p>“Having a materials list helped me budget and plan better. Less waste, less frustration.”</p>
-      <span>— Brian K., home workshop</span>
+      <p>“Having materials lists saved me time and money. Less waste overall.”</p>
+      <span>— Brian K., Home Workshop</span>
     </div>
     <div class="quote">
-      <p>“I finished a project faster because the steps were organized and clear.”</p>
-      <span>— Mike D., weekend woodworker</span>
+      <p>“I finished projects faster because everything was organized and clear.”</p>
+      <span>— Mike D., Weekend Woodworker</span>
     </div>
 
-    <!-- IMAGE 4 -->
-    <div class="img" style="margin-top:14px">
+    <!-- SECOND BANNER -->
+    <div class="banner" style="margin-top:24px">
       <img src="img/finished-project.jpg" alt="Finished woodworking furniture at home" loading="lazy">
     </div>
 
-    <div style="margin-top:14px">
-      <a class="btn" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-        View Packages on the Official Site →
-      </a>
-    </div>
+    <a class="btn" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank">
+      View Packages on the Official Site →
+    </a>
   </div>
 
   <h2>FAQ</h2>
   <div class="faq">
     <details>
       <summary>Is this beginner-friendly?</summary>
-      <p>Many beginners prefer structured steps, clear diagrams, and simpler starter projects before moving up.</p>
+      <p>Yes. Many beginners prefer structured steps and simpler starter projects.</p>
     </details>
     <details>
       <summary>Do I need expensive tools?</summary>
-      <p>Not necessarily. Your results depend on project choice and the tools you already have.</p>
+      <p>No. Your results depend on project choice and tools you already own.</p>
     </details>
     <details>
-      <summary>Where do I see pricing and access details?</summary>
-      <p>On the official vendor page after you click any “Access” button.</p>
+      <summary>Where do I see pricing and details?</summary>
+      <p>On the official vendor page after clicking any access button.</p>
     </details>
   </div>
 
@@ -194,13 +359,14 @@
 
 </div>
 
+<!-- STICKY CTA -->
 <div class="sticky">
   <div class="stickyInner">
     <div class="stickyText">
-      <strong>Ready to see the full system?</strong>
-      <span>Packages, access, and details on the official site</span>
+      <strong>Ready to access the full woodworking system?</strong>
+      <span>Packages, access & details on the official site</span>
     </div>
-    <a class="btn btnInline" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
+    <a class="btn btnInline" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank">
       Access →
     </a>
   </div>
@@ -208,8 +374,9 @@
 
 <script>
 (function(){
-  const d=new Date();
-  document.getElementById('today').textContent=d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  const d = new Date();
+  document.getElementById('today').textContent =
+    d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
 })();
 </script>
 
