@@ -2,17 +2,53 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
 <title>Terms of Service</title>
+<style>
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65;color:#111;background:#fff}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+  h1{margin:0 0 10px;font-size:30px}
+  h2{margin:26px 0 10px;font-size:20px}
+  p,li{font-size:16px;color:#222}
+  .muted{color:#555}
+  .box{border:1px solid #e6e6e6;background:#fafafa;border-radius:14px;padding:14px;margin:16px 0}
+  a{color:#111}
+</style>
 </head>
 <body>
-<h1>Terms of Service</h1>
-<p>Last updated: <script>document.write(new Date().toLocaleDateString("en-US"))</script></p>
+<div class="wrap">
+  <h1>Terms of Service</h1>
+  <p class="muted">Last updated: <span id="today"></span></p>
 
-<p>This website provides general information only and does not offer professional advice.</p>
+  <div class="box">
+    <p><strong>Important:</strong> This website provides general information and may contain affiliate links. We do not sell products directly and we do not provide professional advice.</p>
+  </div>
 
-<p>Questions? Contact us at:</p>
-<p><strong>Email:</strong> mnsspprtteam@gmail.com</p>
+  <h2>Use of the website</h2>
+  <p>By using this website, you agree to these Terms. If you do not agree, please do not use the site.</p>
 
-<a href="index.html">Back</a>
+  <h2>Affiliate disclosure</h2>
+  <p>This website may contain affiliate links. If you purchase through a link, we may receive a commission at no extra cost to you.</p>
+
+  <h2>Third-party links</h2>
+  <p>We may link to third-party websites (vendor). We are not responsible for their content, policies, or practices.</p>
+
+  <h2>No guarantees</h2>
+  <p>We do not guarantee outcomes or results. Your experience depends on many factors including tools, materials, and skill level.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about these Terms:</p>
+  <p><strong>Email:</strong> mnsspprtteam@gmail.com</p>
+
+  <p class="muted"><a href="index.html">← Back to Presell</a> • <a href="sales.html">Sales Page</a></p>
+</div>
+
+<script>
+(function(){
+  const d=new Date();
+  document.getElementById('today').textContent=d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+})();
+</script>
 </body>
 </html>
