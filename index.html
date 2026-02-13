@@ -17,6 +17,8 @@
     --green1:#2fbf71;
     --green2:#1b7f3a;
     --max:820px;
+    --good:#eafff2;
+    --goodLine:#2fbf71;
   }
 
   *{box-sizing:border-box}
@@ -24,10 +26,8 @@
   body{margin:0;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--text);line-height:1.75}
   a{color:inherit}
 
-  /* Space for progress bar */
   .container{max-width:var(--max);margin:auto;padding:72px 18px 140px}
 
-  /* Reading progress bar */
   .progressWrap{
     position:fixed;top:0;left:0;right:0;z-index:9999;
     background:rgba(255,255,255,.92);
@@ -73,7 +73,6 @@
   }
   .topCtaMini:hover{filter:brightness(1.05)}
 
-  /* Top pills */
   .top{
     display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;
     font-size:13px;color:var(--muted);margin-bottom:10px
@@ -87,7 +86,6 @@
   h1{font-size:36px;line-height:1.2;margin:10px 0 14px;font-weight:900}
   .sub{font-size:18px;color:var(--muted);margin:0 0 10px}
 
-  /* NEW: subtle disclosure under subheadline */
   .disclosure{
     font-size:13px;
     color:var(--muted);
@@ -104,7 +102,6 @@
   ul{margin:0 0 18px 20px;font-size:18px}
   li{margin:7px 0}
 
-  /* TOC (improved tap spacing) */
   .toc{
     background:var(--soft);
     border:1px solid var(--line);
@@ -119,15 +116,12 @@
     text-decoration:underline;
     text-underline-offset:2px;
     font-size:16px;
-    padding:8px 8px;          /* NEW: bigger tap target */
+    padding:8px 8px;
     border-radius:10px;
     margin:2px 0;
   }
-  .toc a:hover{
-    background:rgba(0,0,0,.04);
-  }
+  .toc a:hover{background:rgba(0,0,0,.04)}
 
-  /* Banner images */
   .img{margin:18px 0 26px;text-align:center}
   .img.banner{margin:18px 0 26px}
   .img.banner a{display:block}
@@ -146,7 +140,6 @@
   }
   .caption{font-size:13px;color:#666;margin-top:8px}
 
-  /* Highlight */
   .highlight{
     background:var(--warn);
     border-left:6px solid var(--warnLine);
@@ -155,7 +148,36 @@
     margin:22px 0;
   }
 
-  /* Primary CTA box */
+  /* NEW: value box (what you get) */
+  .valuebox{
+    background:var(--good);
+    border:1px solid #c9f5dc;
+    border-left:6px solid var(--goodLine);
+    padding:14px 14px;
+    border-radius:12px;
+    margin:22px 0;
+  }
+  .valuebox strong{display:block;margin-bottom:8px}
+  .checks{
+    list-style:none;
+    padding:0;
+    margin:0;
+    font-size:18px;
+  }
+  .checks li{
+    margin:10px 0;
+    padding-left:28px;
+    position:relative;
+  }
+  .checks li:before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    top:0;
+    font-weight:900;
+    color:var(--green2);
+  }
+
   .cta{
     text-align:center;
     border:1px solid var(--line);
@@ -190,14 +212,12 @@
     100%{box-shadow:0 0 0 0 rgba(47,191,113,0)}
   }
 
-  /* NEW: trust microtext under main CTA button */
   .trustline{
     margin-top:10px;
     font-size:12.5px;
     color:var(--muted);
   }
 
-  /* Cards */
   .quote{
     border:1px solid var(--line);
     border-radius:14px;
@@ -227,7 +247,6 @@
   }
   footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;margin-right:12px}
 
-  /* Sticky CTA */
   .sticky{
     position:fixed;left:0;right:0;bottom:0;
     background:rgba(255,255,255,.96);
@@ -284,12 +303,11 @@
 
   <h1>Why Most Woodworking Projects End in Frustration — Even With “Good” Plans</h1>
   <p class="sub">
-    A simple reason many DIY builds fall apart (and what skilled builders do to avoid wasted wood, time, and headaches).
+    A simple reason many DIY builds fall apart — and how a structured “plan library” helps people finish projects with less waste and less guesswork.
   </p>
 
-  <!-- NEW: subtle disclosure near top -->
   <p class="disclosure">
-    This page may contain affiliate links. Details and policies are available on the
+    This page may contain affiliate links. For pricing, access, and official policies, visit the
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">official website</a>.
   </p>
 
@@ -297,15 +315,20 @@
     <strong>In this article:</strong>
     <a href="#problem">• The real problem nobody talks about</a>
     <a href="#difference">• What experienced builders do differently</a>
-    <a href="#system">• The woodworking “system” people are using</a>
+    <a href="#system">• What’s included in the woodworking plan library</a>
     <a href="#testimonials">• Testimonials (example-style)</a>
     <a href="#faq">• Quick FAQ</a>
   </div>
 
-  <!-- BANNER HERO IMAGE -->
+  <!-- HERO IMAGE (works even if you don't have /img folder) -->
   <div class="img banner">
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-      <img src="img/hero-workshop.jpg" alt="Woodworker working in a home workshop" loading="lazy">
+      <img
+        src="img/hero-workshop.jpg"
+        alt="Woodworker working in a home workshop"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=1400&q=80';"
+      >
     </a>
     <div class="caption">Illustrative image</div>
   </div>
@@ -322,7 +345,8 @@
 
   <h2 id="problem">The real problem almost nobody talks about</h2>
   <p>
-    The issue usually isn’t your skill level or tools — it’s the lack of <strong>clear, step-by-step guidance</strong>.
+    The issue usually isn’t your skill level or tools — it’s the lack of <strong>clear, step-by-step guidance</strong>
+    that removes guesswork.
   </p>
 
   <div class="highlight">
@@ -339,29 +363,50 @@
     <li>Projects matched to skill level</li>
   </ul>
 
-  <!-- BANNER BLUEPRINT IMAGE -->
+  <!-- BLUEPRINT IMAGE (fallback) -->
   <div class="img banner">
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-      <img src="img/blueprints.jpg" alt="Detailed woodworking plans and blueprints" loading="lazy">
+      <img
+        src="img/blueprints.jpg"
+        alt="Detailed woodworking plans and blueprints"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=80';"
+      >
     </a>
     <div class="caption">Conceptual illustration</div>
   </div>
 
-  <h2 id="system">That’s why one woodworking library started getting attention</h2>
+  <h2 id="system">What’s included in the woodworking plan library</h2>
   <p>
-    A large collection of structured woodworking plans — designed to remove guesswork — has become popular among hobbyists
-    and professionals alike.
+    This isn’t a random set of PDFs. It’s a structured plan library designed to help you choose a project,
+    follow clear steps, and finish with fewer mistakes.
+  </p>
+
+  <!-- NEW: What you get block -->
+  <div class="valuebox">
+    <strong>What you’ll typically find inside:</strong>
+    <ul class="checks">
+      <li>Large plan library organized to reduce guesswork</li>
+      <li>Step-by-step instructions + diagrams</li>
+      <li>Materials/cut lists for many projects</li>
+      <li>Projects suitable for beginners and hobbyists</li>
+      <li>Instant digital access after checkout (vendor site)</li>
+    </ul>
+  </div>
+
+  <!-- NEW: micro trust bullets (your suggested copy) -->
+  <p style="margin-top:-6px;color:var(--muted);font-size:14.5px;">
+    ✔ One-time payment (see vendor) • ✔ Instant download access • ✔ Read the official terms & policies on checkout
   </p>
 
   <div class="cta">
-    <p class="ctaTitle">See how this woodworking system works step by step</p>
-    <p class="ctaSub">Instant access • Digital plans • Build at your pace</p>
+    <p class="ctaTitle">Want the full plan package with instant access?</p>
+    <p class="ctaSub">See what’s included • Pricing • Secure checkout</p>
 
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-      View the Complete Woodworking System →
+      Get Instant Access To The Woodworking Plans →
     </a>
 
-    <!-- NEW: trust microtext -->
     <div class="trustline">
       You’ll be redirected to the vendor’s secure checkout and official policies.
     </div>
@@ -434,7 +479,7 @@
 <div class="sticky" aria-label="Sticky call to action">
   <div class="stickyInner">
     <div class="stickyText">
-      <strong>Want the full woodworking system?</strong>
+      <strong>Want the full woodworking plan package?</strong>
       <span>See what’s included + instant access</span>
     </div>
     <a class="btnSm" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
@@ -468,4 +513,3 @@
 
 </body>
 </html>
-
