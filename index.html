@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Why Most Woodworking Projects End in Frustration (Even With “Good” Plans)</title>
+<title>How Ordinary People Are Turning Simple Pieces of Wood Into $3,000/Month (Even If They’ve Never Built Anything Before)</title>
 
 <style>
   :root{
@@ -19,6 +19,8 @@
     --max:820px;
     --good:#eafff2;
     --goodLine:#2fbf71;
+    --info:#eef6ff;
+    --infoLine:#2aa7ff;
   }
 
   *{box-sizing:border-box}
@@ -148,7 +150,6 @@
     margin:22px 0;
   }
 
-  /* NEW: value box (what you get) */
   .valuebox{
     background:var(--good);
     border:1px solid #c9f5dc;
@@ -158,6 +159,17 @@
     margin:22px 0;
   }
   .valuebox strong{display:block;margin-bottom:8px}
+
+  .infobox{
+    background:var(--info);
+    border:1px solid #d6e9ff;
+    border-left:6px solid var(--infoLine);
+    padding:14px 14px;
+    border-radius:12px;
+    margin:22px 0;
+  }
+  .infobox strong{display:block;margin-bottom:8px}
+
   .checks{
     list-style:none;
     padding:0;
@@ -238,6 +250,35 @@
   }
   .mini strong{display:block;margin-bottom:6px}
 
+  .gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    margin:18px 0 26px;
+  }
+  @media(min-width:760px){
+    .gallery{grid-template-columns:1fr 1fr}
+  }
+  .gItem{
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 12px 34px rgba(0,0,0,.06);
+  }
+  .gItem a{display:block}
+  .gItem img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    display:block;
+  }
+  .gCap{
+    padding:10px 12px;
+    font-size:14px;
+    color:var(--muted);
+  }
+
   footer{
     margin-top:40px;
     font-size:12.5px;
@@ -301,14 +342,15 @@
     <span class="pill">Updated: <span id="today"></span></span>
   </div>
 
-  <h1>Why Most Woodworking Projects End in Frustration — Even With “Good” Plans</h1>
+  <!-- NEW HEADLINE -->
+  <h1>How Ordinary People Are Turning Simple Pieces of Wood Into $3,000/Month Side Income (Even If They’ve Never Built Anything Before)</h1>
   <p class="sub">
-    A simple reason many DIY builds fall apart — and how a structured “plan library” helps people finish projects with less waste and less guesswork.
+    Discover the step-by-step woodworking plans that show you exactly what to cut, what to use, and how to build projects people already buy every day.
   </p>
 
-  <!-- ✅ CHANGE 1: PROVA SOCIAL NO TOPO -->
+  <!-- Quick social proof line -->
   <p style="font-size:17px;margin:0 0 18px;">
-    <strong>Thousands of hobbyists are already using this complete woodworking plans package to build furniture and home projects with confidence.</strong>
+    <strong>Thousands of hobbyists and beginners are using a structured plan library to finish projects faster, waste less wood, and build with confidence.</strong>
   </p>
 
   <p class="disclosure">
@@ -318,15 +360,18 @@
 
   <div class="toc">
     <strong>In this article:</strong>
-    <a href="#problem">• The real problem nobody talks about</a>
-    <a href="#difference">• What experienced builders do differently</a>
+    <a href="#hook">• The “garage” story that changes everything</a>
+    <a href="#problem">• The real reason DIY projects fail</a>
+    <a href="#benefits">• What these plans help you do</a>
+    <a href="#gallery">• Examples of simple projects you can build</a>
     <a href="#system">• What’s included in the woodworking plan library</a>
     <a href="#testimonials">• Testimonials (example-style)</a>
     <a href="#faq">• Quick FAQ</a>
+    <a href="#final">• Final note + where to get access</a>
   </div>
 
-  <!-- HERO IMAGE (works even if you don't have /img folder) -->
-  <div class="img banner">
+  <!-- HERO IMAGE -->
+  <div class="img banner" id="hook">
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
       <img
         src="img/hero-workshop.jpg"
@@ -338,48 +383,128 @@
     <div class="caption">Illustrative image</div>
   </div>
 
+  <!-- NEW: Curiosity + benefit hook -->
+  <p><strong>It started with one small wooden project in a garage…</strong></p>
+  <p>No experience. No expensive tools. No big workshop.</p>
+  <p>
+    And yet, some everyday people discovered that when you have <strong>clear step-by-step plans</strong>,
+    you stop guessing — and you can actually finish projects that look great (and in many cases, sell well locally or online).
+  </p>
+
+  <div class="infobox">
+    <strong>Why this matters:</strong>
+    Most woodworking frustration isn’t lack of talent — it’s missing steps, unclear measurements, and “good plans” that assume you already know what to do.
+  </div>
+
+  <h2 id="problem">The real problem almost nobody talks about</h2>
   <p>
     If you’ve ever started a woodworking project full of motivation… only to get stuck halfway,
     waste materials, or end up with something that doesn’t look right — you’re not alone.
   </p>
-
   <p>
     Many “plans” online skip steps, leave out measurements, or assume you already have years of experience.
-    That’s why so many projects stall or fail.
-  </p>
-
-  <h2 id="problem">The real problem almost nobody talks about</h2>
-  <p>
-    The issue usually isn’t your skill level or tools — it’s the lack of <strong>clear, step-by-step guidance</strong>
-    that removes guesswork.
+    That’s why so many DIY builds stall or fail.
   </p>
 
   <div class="highlight">
     <strong>Important:</strong> Even small missing details can turn a simple project into wasted time, wasted wood, and frustration.
   </div>
 
-  <h2 id="difference">What experienced builders do differently</h2>
+  <h2 id="benefits">What experienced builders do differently</h2>
   <p>Instead of guessing, they follow plans that include:</p>
 
+  <!-- NEW benefit list (stronger + beginner focused) -->
   <ul>
-    <li>Exact cutting and materials lists</li>
-    <li>Detailed diagrams and multiple angles</li>
-    <li>Clear steps from start to finish</li>
-    <li>Projects matched to skill level</li>
+    <li>Exact cutting lists and materials lists (so you stop “buying extra just in case”)</li>
+    <li>Clear diagrams and multiple angles (so you know what you’re building before you cut)</li>
+    <li>Step-by-step instructions from start to finish (so you don’t get stuck mid-way)</li>
+    <li>Projects organized by skill level (so beginners don’t start too hard)</li>
+    <li>Ideas you can build in small spaces (garage, backyard, or a corner of a room)</li>
   </ul>
 
-  <!-- BLUEPRINT IMAGE (fallback) -->
-  <div class="img banner">
+  <!-- CTA #1 (early) -->
+  <div class="cta">
+    <p class="ctaTitle">Want to see the full woodworking plan library?</p>
+    <p class="ctaSub">What’s included • Pricing • Secure checkout</p>
+
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-      <img
-        src="img/blueprints.jpg"
-        alt="Detailed woodworking plans and blueprints"
-        loading="lazy"
-        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=80';"
-      >
+      Click Here To See All 16,000 Woodworking Plans →
     </a>
-    <div class="caption">Conceptual illustration</div>
+
+    <div class="trustline">
+      One-time payment • Instant access • Secure checkout on official website
+    </div>
   </div>
+
+  <h2 id="gallery">Here are a few simple projects you can start building</h2>
+  <p style="color:var(--muted);font-size:16px;margin-top:-6px;">
+    Tip: Replace these with your own images anytime. These are illustrative, with safe fallback images.
+  </p>
+
+  <!-- NEW: Visual proof gallery -->
+  <div class="gallery">
+    <div class="gItem">
+      <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
+        <img
+          src="img/project-1.jpg"
+          alt="Simple wooden shelf project"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1582582494700-5d3c64b9b06c?auto=format&fit=crop&w=1400&q=80';"
+        >
+      </a>
+      <div class="gCap">Simple shelves & storage builds</div>
+    </div>
+
+    <div class="gItem">
+      <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
+        <img
+          src="img/project-2.jpg"
+          alt="Small wooden table project"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=1400&q=80';"
+        >
+      </a>
+      <div class="gCap">Tables, benches & simple furniture</div>
+    </div>
+
+    <div class="gItem">
+      <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
+        <img
+          src="img/project-3.jpg"
+          alt="Wooden planter box project"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1598300053652-19a9f6f3b26e?auto=format&fit=crop&w=1400&q=80';"
+        >
+      </a>
+      <div class="gCap">Outdoor builds (planters, small decks, etc.)</div>
+    </div>
+
+    <div class="gItem">
+      <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
+        <img
+          src="img/project-4.jpg"
+          alt="Wooden organizer project"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80';"
+        >
+      </a>
+      <div class="gCap">Organizers, racks & “weekend projects”</div>
+    </div>
+  </div>
+
+  <!-- NEW: Story block (mid-page) -->
+  <h2>For years, most people believed woodworking required expensive tools</h2>
+  <p>
+    For years, thousands of people believed woodworking required expensive tools, years of training, and a full workshop.
+  </p>
+  <p>
+    But a group of everyday people discovered a shortcut…
+    They started using <strong>done-for-you woodworking plans</strong> that show exactly what to cut,
+    what to use, and how to build each piece step-by-step.
+  </p>
+  <p>
+    And when you remove guesswork, woodworking becomes simpler, faster — and honestly, fun again.
+  </p>
 
   <h2 id="system">What’s included in the woodworking plan library</h2>
   <p>
@@ -387,7 +512,6 @@
     follow clear steps, and finish with fewer mistakes.
   </p>
 
-  <!-- ✅ CHANGE 2: BLOCO "WHAT YOU GET" MAIS COMERCIAL -->
   <div class="valuebox">
     <strong>What you’ll get inside:</strong>
     <ul class="checks">
@@ -395,25 +519,28 @@
       <li>Step-by-step instructions</li>
       <li>Exact measurements & materials list</li>
       <li>Beginner to advanced projects</li>
-      <li>Instant digital download</li>
+      <li>Instant digital download access</li>
     </ul>
   </div>
 
-  <!-- NEW: micro trust bullets (your suggested copy) -->
   <p style="margin-top:-6px;color:var(--muted);font-size:14.5px;">
     ✔ One-time payment (see vendor) • ✔ Instant download access • ✔ Read the official terms & policies on checkout
   </p>
 
-  <div class="cta">
-    <p class="ctaTitle">Want the full plan package with instant access?</p>
-    <p class="ctaSub">See what’s included • Pricing • Secure checkout</p>
+  <!-- NEW: urgency box -->
+  <div class="highlight">
+    <strong>Important:</strong> Access to these plans may not be available for long. The creators sometimes limit access due to high demand.
+  </div>
 
-    <!-- ✅ CHANGE 3: BOTÃO MAIS COMERCIAL -->
+  <!-- CTA #2 (mid) -->
+  <div class="cta">
+    <p class="ctaTitle">Ready to see everything included?</p>
+    <p class="ctaSub">Instant access • Secure checkout • Official website</p>
+
     <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
-      Get Instant Access To The Full Plan Package →
+      Access The Woodworking Plans Now →
     </a>
 
-    <!-- ✅ CHANGE 4: LINHA DE CONFIANÇA (mais direta) -->
     <div class="trustline">
       One-time payment • Instant access • Secure checkout on official website
     </div>
@@ -431,7 +558,7 @@
       </p>
     </div>
     <div class="mini">
-      <strong>What this avoids</strong>
+      <strong>What this helps you avoid</strong>
       <p style="margin:0;">
         Vague steps, missing measurements, random PDFs, and “figure it out as you go” frustration.
       </p>
@@ -470,6 +597,27 @@
     <p style="margin:0;">On the official vendor page (you’ll be redirected from the buttons above).</p>
   </div>
 
+  <!-- FINAL SECTION -->
+  <h2 id="final">Final note</h2>
+  <p>
+    If you want to build projects without wasting wood, guessing measurements, or quitting halfway,
+    the easiest shortcut is using a complete plan library with step-by-step instructions.
+  </p>
+
+  <!-- CTA #3 (final) -->
+  <div class="cta">
+    <p class="ctaTitle">Click below now to see all the woodworking plans</p>
+    <p class="ctaSub">Before the offer changes or access is limited</p>
+
+    <a href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
+      View The Woodworking Plans On The Official Website →
+    </a>
+
+    <div class="trustline">
+      One-time payment • Instant access • Secure checkout on official website
+    </div>
+  </div>
+
   <footer>
     <p>
       Disclaimer: This page is for informational purposes only and may contain affiliate links.
@@ -486,7 +634,7 @@
 <div class="sticky" aria-label="Sticky call to action">
   <div class="stickyInner">
     <div class="stickyText">
-      <strong>Want the full woodworking plan package?</strong>
+      <strong>Want the full woodworking plan library?</strong>
       <span>See what’s included + instant access</span>
     </div>
     <a class="btnSm" href="https://f842f2pftzhgu1gjn57bv9yjbv.hop.clickbank.net" target="_blank" rel="noopener noreferrer">
